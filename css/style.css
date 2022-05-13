@@ -13,10 +13,10 @@ body {
 /*Layout con Grid - HOME  (mobile first)*/
 .container-home {
     display: grid;
-    grid-template-areas: "header"
+    grid-template-areas: 
+        "header"
         "main-home"
         "footer";
-
 }
 
 /*estilos del header - TODOS LOS HTML*/
@@ -34,7 +34,7 @@ body {
     color: #ffe4c4;
     font-weight: normal;
 
-    animation: bounce;
+    animation: animate__flip;
     animation-duration: 2s;
     animation-timing-function: linear; 
 }
@@ -477,16 +477,16 @@ body {
         padding: 3rem 0;
 
         animation-name: scale-img;
-        animation-duration: 4s;
+        animation-duration: 1s;
         animation-timing-function: linear;
-        animation-iteration-count: infinite;
+        
     }
     @keyframes scale-img {
         from{
-            transform: scale(0.9);
+            transform:rotate(0deg);
         }
         to {
-            transform: scale(1);
+            transform:rotate(360deg);
         }
     }
 
