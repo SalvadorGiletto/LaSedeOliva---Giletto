@@ -289,11 +289,7 @@ body {
 
 /*Estilos de contacto (sin responsive ni grid - esperando Bootstrap)*/
 
-.cont-form{
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-}
+
 .contact-title {
     font-family:'Satisfy', cursive;
     font-size: 35px;
@@ -377,6 +373,14 @@ body {
 .footer-creator__ig:hover {
     text-decoration: underline;
 }
+
+/*FOOTER CON BOOTSTRAP (SOLO PAGE FORMULARIO)*/
+.footer-bs { 
+    background-color: #a68b6a;
+
+} 
+
+
 
 /*MEDIA QUERIS*/
 @media screen and (min-width:600px) {
