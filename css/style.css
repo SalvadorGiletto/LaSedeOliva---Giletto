@@ -24,8 +24,12 @@ body {
     grid-area: header;
     background-image: url(../img/header.png);
     background-size: cover;
-    padding-bottom: 1rem;
+    background-position: center;
+   
+    padding-top: 4rem;
     width: 100%;
+    height: fit-content;
+
 }
 .header__title {
     text-align: center;
@@ -33,35 +37,36 @@ body {
     font-family: 'Satisfy', cursive;
     color: #ffe4c4;
     font-weight: normal;
-
-    animation: animate__flip;
-    animation-duration: 2s;
-    animation-timing-function: linear; 
 }
 
 /*Estilos del nav manu - TODOS LOS HTML*/
-.nav-bar__menu {
-    display: flex;
-    list-style-type: none;
-    justify-content: space-evenly;
-}
 
-.nav-bar__category {
-    font-size: 1.2rem;
-    color: #ffe4c4;
-    background-color: #00000037;
-    border-radius: 5px;
-    padding: 5px;
-}
+    .nav-general {
+        color: black;
+        font-size: 1.4rem;
+        background-color: #feebd484;
+        border-bottom: 1px solid black;
+    }
 
-.nav-bar__category:hover {
-    font-weight: bold;
-}
+    .nav-marca {
+        color: #feebd4;
+        font-family: 'Satisfy', cursive;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-left: 2rem;
 
-.nav-bar__category-link {
-    text-decoration: none;
-    color: #ffe4c4;
-}
+        transition: 0.3s;
+    }
+    .nav-marca:hover {
+        padding: 0.3rem;
+    }
+    .navbar-collapse{
+        display: flex;
+        justify-content: center;
+    }
+    .nav-item {
+        margin: 0 2rem;
+    }
 
 /*estilos del main-home (index.html)*/
 .main-home {
@@ -186,8 +191,8 @@ body {
     width: 90%;
 }
 .table {
+    border-top: 5px solid #e4c095 ;
     font-size: 1.2rem;
-    border: 3px solid #a68b6a;
     border-radius: 1rem 0;
     margin: 1.5rem 0;
     padding: 0.3rem 0.3rem 0.3rem 0.5rem;
@@ -201,10 +206,6 @@ body {
     font-size: 1.5rem;
     text-align: center;
     padding: 0.3rem 0;
-}
-
-.table td {
-    padding: 0.2rem 0;
 }
 
 .suggestion {
@@ -289,7 +290,11 @@ body {
 
 /*Estilos de contacto (sin responsive ni grid - esperando Bootstrap)*/
 
-
+.cont-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .contact-title {
     font-family:'Satisfy', cursive;
     font-size: 35px;
@@ -299,9 +304,6 @@ body {
 .contact-form {
     width: 500px;
     margin: 20px 35px;
-}
-.contact-form legend{
-    font-size: 35px;
 }
 .contact-form__line {
     font-size: 20px;
@@ -337,9 +339,9 @@ body {
     align-items: center;
 }
 /*footer follow*/
-.footer-title {
+.footer-title__follow {
     color: #ffe4c4;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding-bottom: 1rem;
 }
 /*footer iconos*/
@@ -350,10 +352,12 @@ body {
     justify-content: space-evenly;
 }
 .footer-redes__link {
+    font-size: 1.5rem;
     text-decoration: none;
     color: #ffe4c4;
 }
 .footer-redes__link:hover {
+    color: #ffe4c4;
     border-bottom: 1px solid #ffe4c4;
 }
 /*footer creator/copy*/
@@ -373,13 +377,6 @@ body {
 .footer-creator__ig:hover {
     text-decoration: underline;
 }
-
-/*FOOTER CON BOOTSTRAP (SOLO PAGE FORMULARIO)*/
-.footer-bs { 
-    background-color: #a68b6a;
-
-} 
-
 
 
 /*MEDIA QUERIS*/
@@ -414,11 +411,15 @@ body {
     /*media queris carta*/
     .carta {
         display: grid;
-        grid-template-areas: 
+        grid-template-areas:
+            
             "entradas postres"
             "principales bebidas"
             "cafeteria cafeteria";
         justify-items: center;
+
+    }
+    .header {
         width: 100%;
     }
     .entradas {
@@ -449,7 +450,6 @@ body {
 }
 
 @media screen and (min-width:1024px) {
-
     /*media queris home*/
     .section-home__title {
         text-align: right;
@@ -483,15 +483,6 @@ body {
         animation-name: scale-img;
         animation-duration: 1s;
         animation-timing-function: linear;
-        
-    }
-    @keyframes scale-img {
-        from{
-            transform:rotate(0deg);
-        }
-        to {
-            transform:rotate(360deg);
-        }
     }
 
     /*media queris galeria*/
@@ -528,6 +519,9 @@ body {
         "footer footer" ;
         grid-template-columns: 3fr 1fr;
     }
+    .header {
+        width: 100%;
+    }
     .carta{
         width: 90%;
     }
@@ -541,7 +535,6 @@ body {
     .recipes-subtitle{
         font-size: 2.6rem;
     }
-
     .recipe-one{
         display: grid;
         grid-template-areas: 
