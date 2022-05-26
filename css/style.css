@@ -93,13 +93,13 @@ body {
 
 .section-home__title {
     font-family: 'Satisfy', cursive;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: normal;
     text-align: center;
 }
 
 .section-home__text {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     text-align: start;
 }
 
